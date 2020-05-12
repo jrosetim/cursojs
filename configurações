@@ -1,0 +1,31 @@
+// Beautify
+// Dracula Oficial - theme
+// ESLint
+// JavaScript Snippet Pack
+// matreial icon theme
+// pomodoro timer
+// Rainbow brackets
+// Debugger for Chrome
+
+// ctrl + shift + p
+// ctrl + p
+// ctrl + shift + l - substitui o valor selecionado em todo o codigo
+------------------------------------------------------------------------------------------------------------------------------
+
+// Configurando o ambiente
+instalar yarn
+
+dentro da pasta do projeto exercutar o comando  > yarn init
+
+instalar o babel pelo terminal usando os comandos 
+  yarn add @babel/cli
+  yarn add @babel/preset-env
+  yarn add @babe/core
+  yarn add @babel/plugin-proposal-object-rest-spread
+
+adicionar pasta node_modules no .gitignore
+
+depois de configurado startar o babel com rodando o comando 'yarn dev' pelo terminal dentro da pasta do projeto.
+'yarn dev' refere-se ao script adicionado no arquivo 'package.json'
+
+------------------------------------------------------------------------------------------------------------------------------
