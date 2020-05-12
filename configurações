@@ -25,6 +25,20 @@ instalar o babel pelo terminal usando os comandos
 
 adicionar pasta node_modules no .gitignore
 
+criar arquivo .babelrc e colocar nele as dependencias
+{
+  "preset":["@babel/env"],
+  "plugins":["@babel/plugin-proposal-object-rest-spread"]
+}
+
+no arquivo packge.json adiconar um script no final
+
+  "scripts":{
+    "dev": "babel ./main.js -o ./bundle.js -w"
+  }
+
+no arquivo index.html ao invez de colocar o arquivo main.js colocar o bundle.js
+
 depois de configurado startar o babel com rodando o comando 'yarn dev' pelo terminal dentro da pasta do projeto.
 'yarn dev' refere-se ao script adicionado no arquivo 'package.json'
 
