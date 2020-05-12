@@ -1,9 +1,7 @@
 ubuntu
   sudo apt-get install xclip
 
-windows
-
-
+-----------------------------------------------------------------------------------------------------------------------------------
 
 depois de instalado o git no pc, seguimos as proximas etapas para configurar a conta
 
@@ -37,9 +35,9 @@ ssh-add ~/.ssh/id_rsa
 Para copiar a chave do bash, digite o seguinte comando:
 
 windows
-clip < ~/.ssh/id_rsa.pub  
+    clip < ~/.ssh/id_rsa.pub  
 Linux
-xclip -selection clipboard ~/.ssh/id_rsa.pub  
+    xclip -selection clipboard ~/.ssh/id_rsa.pub  
 
 Abra o Github no navegador, faça o login e selecione a opção settings em seu menu:
 No menu lateral esquerdo, escolha a opção SSH Keys e depois clique no botão Add SSH key:
@@ -60,7 +58,7 @@ Digite yes e aperte enter.
 
 Hi username! You've successfully authenticated, but GitHub does not provide shell access. 
 
-
+-----------------------------------------------------------------------------------------------------------------------------------
 criar um repositorio fazio no git.
 copiar o nome ex: git@github.com:jrosetim/cursojs.git
 
@@ -77,3 +75,4 @@ depois disso é o caminho feliz
 git add .
 git commit -m "comentario"
 git push -u origin master
+-----------------------------------------------------------------------------------------------------------------------------------
