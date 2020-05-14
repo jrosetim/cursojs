@@ -54,3 +54,8 @@ yarn add webpack webpack-cli -D
 criar arquivo webpack.config.js
 
 yarn add babel-loader -D
+
+yarn add webpack-dev-server -D
+
+
+
