@@ -13,8 +13,12 @@
 ------------------------------------------------------------------------------------------------------------------------------
 
 // Configurando o ambiente
+instalar NPM
+sudo apt install npm
+
 instalar yarn
 
+//------------------------------------
 dentro da pasta do projeto exercutar o comando  > yarn init
 
 instalar o babel pelo terminal usando os comandos 
@@ -43,3 +47,10 @@ depois de configurado startar o babel com rodando o comando 'yarn dev' pelo term
 'yarn dev' refere-se ao script adicionado no arquivo 'package.json'
 
 ------------------------------------------------------------------------------------------------------------------------------
+Configurando WEBPACH
+// OBS -D na frente do comando adiciona a dependencia na tag devDependencies ao inves de adicionar na tag dependecies
+yarn add webpack webpack-cli -D
+
+criar arquivo webpack.config.js
+
+yarn add babel-loader -D
