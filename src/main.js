@@ -2,7 +2,7 @@ import api from './api';
 
 class App{
     constructor(){
-        this.repositorie = [];
+        this.repositories = [];
         this.formEl = document.querySelector('form[name=form]');
         this.listEl = document.querySelector('ul[id=lista]');
         this.inputEl = document.querySelector('input[name=repositorio]');
@@ -19,28 +19,34 @@ class App{
 
         const repoInput = this.inputEl.value;
 
-        const response = api.get(`/${repoInput}`);
+        if (repoInput.length === 0 )
+            return;
 
-        console.log(response);
+        try{
+            const response = await api.get(`/${repoInput}`);
 
-        //const {name, description, html_url, owner:{avatar_url}} = response;
+            console.log(response);
 
-        this.repositorie.push({
-            name,
-            description,
-            avatar_url,
-            html_url,
-        })
+            const {name, description, html_url, owner: { avatar_url } } = response.data;
+            
+            this.repositories.push({
+                name,
+                description,
+                html_url,
+                avatar_url,
+            })
 
-        this.render();
+            this.render();
+        }catch(erro){
+            console.log("OOOOOOOOOPPPPSSSSS");
+            console.log(erro);
+        }
     }
 
     render(){
         this.listEl.innerHTML = '';
 
-        console.log(repositorie);
-
-        this.repositorie.forEach(repo =>{
+        this.repositories.forEach(repo =>{
             let imgEl = document.createElement('img');
             imgEl.setAttribute('src', repo.avatar_url);
 
@@ -51,7 +57,9 @@ class App{
             descriptionEl.appendChild(document.createTextNode(repo.description));
 
             let aEl = document.createElement('a');
+            aEl.setAttribute('target', '_black');
             aEl.setAttribute('href', repo.html_url);
+            aEl.appendChild(document.createTextNode('Acessar'));
 
             let listItemEl = document.createElement('li');
             listItemEl.appendChild(imgEl);
