@@ -5,7 +5,8 @@
 // matreial icon theme
 // pomodoro timer
 // Rainbow brackets
-// Debugger for Chrome
+// Debugger for Chrome para startar pressionar F5
+//live server 
 
 // ctrl + shift + p
 // ctrl + p
@@ -56,6 +57,12 @@ criar arquivo webpack.config.js
 yarn add babel-loader -D
 
 yarn add webpack-dev-server -D
+
+yarn add @babel/plugin-transform-async-to-generator -D
+
+yarn add @babel/polyfill -D
+
+yarn add axios
 
 
 
