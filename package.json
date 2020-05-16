@@ -13,7 +13,7 @@
     "axios": "^0.19.2"
   },
   "scripts": {
-    "dev": "webpack-dev-server --mode-development",
+    "dev": "webpack-dev-server --mode-development","postinstall": "npm rebuild babel-cli",
     "build": "webpack --mode-production",
     "postinstall": "npm rebuild babel-cli"
   },

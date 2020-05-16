@@ -52,7 +52,31 @@ Configurando WEBPACH
 // OBS -D na frente do comando adiciona a dependencia na tag devDependencies ao inves de adicionar na tag dependecies
 yarn add webpack webpack-cli -D
 
-criar arquivo webpack.config.js
+//-----------------------------------------------------------------------------
+criar arquivo webpack.config.js inicialmente pode ser configurado assim
+
+module.exports = {
+    entry: ['@babel/polyfill', './src/main.js'],
+    output: {
+        path: __dirname + '/public',
+        filename: 'bundle.js'
+    },
+    devServer: {
+        contentBase: __dirname + '/public',
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /nome_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            }
+        ]
+    }
+}
+//-----------------------------------------------------------------------------
 
 yarn add babel-loader -D
 
@@ -61,6 +85,13 @@ yarn add webpack-dev-server -D
 yarn add @babel/plugin-transform-async-to-generator -D
 
 yarn add @babel/polyfill -D
+
+alterar o script do package.json para
+
+"dev": "webpack-dev-server --mode-development"
+
+colocar no .babelrc nos plugins
+"@babel/plugin-transform-async-to-generator"
 
 yarn add axios
 
