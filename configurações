@@ -15,9 +15,17 @@
 
 // Configurando o ambiente
 instalar NPM
+
 sudo apt install npm
 
+//------------------------------------
 instalar yarn
+
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+sudo apt update && sudo apt install yarn
 
 //------------------------------------
 dentro da pasta do projeto exercutar o comando  > yarn init
@@ -32,7 +40,14 @@ adicionar pasta node_modules no .gitignore
 
 criar arquivo .babelrc e colocar nele as dependencias
 {
-  "preset":["@babel/env"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry"
+      }
+    ]
+  ],
   "plugins":["@babel/plugin-proposal-object-rest-spread"]
 }
 
