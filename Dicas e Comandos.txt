@@ -2,3 +2,19 @@ subir servidor statico cpm python3
 Entrar na pasta onde esta os arquivos e rodar o comando
 
 python3 -m http.server 3000
+
+------------------------------------------------------------
+Criar um docker mongoDB
+sudo docker run --name mongodb -p 27017:27017 -d mongo
+
+retorna as imagens baixadas no PC
+docker ps -a
+
+Startar um docker criado
+docker start nomeDoContainer
+ex:
+docker start mongodb
+
+
+
+------------------------------------------------------------
