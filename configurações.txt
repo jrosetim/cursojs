@@ -16,14 +16,15 @@
 // ctrl + shift + p
 // ctrl + p
 // ctrl + shift + l - substitui o valor selecionado em todo o codigo
-------------------------------------------------------------------------------------------------------------------------------
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
 // Configurando o ambiente
-instalar NPM
+instalar nodeJs e npm
 
-sudo apt install npm
+para iniciar um projeto node, entrar na pasta onde quer criar o projeto e pelo prompt rodar o comando
+npm init -y
 
-//------------------------------------
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 instalar yarn
 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -32,7 +33,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 
 sudo apt update && sudo apt install yarn
 
-//------------------------------------
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 dentro da pasta do projeto exercutar o comando  > yarn init
 
 instalar o babel pelo terminal usando os comandos 
@@ -67,12 +68,12 @@ no arquivo index.html ao invez de colocar o arquivo main.js colocar o bundle.js
 depois de configurado startar o babel com rodando o comando 'yarn dev' pelo terminal dentro da pasta do projeto.
 'yarn dev' refere-se ao script adicionado no arquivo 'package.json'
 
-------------------------------------------------------------------------------------------------------------------------------
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 Configurando WEBPACH
 // OBS -D na frente do comando adiciona a dependencia na tag devDependencies ao inves de adicionar na tag dependecies
 yarn add webpack webpack-cli -D
 
-//-----------------------------------------------------------------------------
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 criar arquivo webpack.config.js inicialmente pode ser configurado assim
 
 module.exports = {
@@ -96,7 +97,7 @@ module.exports = {
         ]
     }
 }
-//-----------------------------------------------------------------------------
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
 yarn add babel-loader -D
 
