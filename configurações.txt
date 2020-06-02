@@ -29,6 +29,7 @@ instalar yarn
 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 
+
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
 sudo apt update && sudo apt install yarn
@@ -116,5 +117,51 @@ colocar no .babelrc nos plugins
 
 yarn add axios
 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+modulos para TypeScript
+
+npm i typescript -D
+
+dentro da pasta do projeto abri o terminal e rodar o comando abaixo
+npx tsc --init
+
+para subir o servidor usar um dos comandos
+se o ts-node-dev estiver instalado 
+	npx ts-node-dev src/server.ts
+se não estiver
+	npx ts-node src/server.ts
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+express
+
+npm i express
+
+caso esteja usando typeScript sera necessario o seguinte modulo também
+Modulo para trabalhar com rotas
+npm i @types/express -D
 
 
+dependencia necessaria para o node conseguir executar os scrips em typescript
+após instalada, para executar comando deve se usar npx e não npm ex: npx ts-node src/server.ts
+
+Comando abaixo serve para instalar a dependencia que sobre o servidor, mas sem hot reload
+	npm install ts-node -D  para utilizar npx ts-node src/server.ts
+
+Comando abaixo serve para instalar a dependencia que sobre o servidor, com hot reload
+	npm i ts-node-dev -D para utilizar npx ts-node-dev src/server.ts
+
+	para ficar mais pratico, pode ser colocado no package.json nos scripts, um script para rodar o comando assima
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts"
+  },	
+
+  para rodar é só utilizar o comando npm run dev
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+criar projeto react com typeScript, os dois passos acima devem estar configurados
+
+npx create-react-app web --template=typescript
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
